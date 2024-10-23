@@ -3,13 +3,6 @@
   <a href="{{ '#!' + cars.hrefNew }}" class="btn btn-success">Create new</a>
 </header>
 
-<mat-table ng-controller="carsController as carsController" [dataSource]="cars">
-  <ng-container matColumnDef="userName">
-    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-    <mat-cell *matCellDef="let user"> {{user.name}} </mat-cell>
-  </ng-container>
-</mat-table>
-
 <table class="table" ng-controller="carsController as carsController">
   <thead>
     <tr>
