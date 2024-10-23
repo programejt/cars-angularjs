@@ -1,0 +1,41 @@
+<header class="text-center mb-3">
+  <h1>Car index</h1>
+  <a href="{{ '#!' + cars.hrefNew }}" class="btn btn-success">Create new</a>
+</header>
+
+<mat-table ng-controller="carsController as carsController" [dataSource]="cars">
+  <ng-container matColumnDef="userName">
+    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+    <mat-cell *matCellDef="let user"> {{user.name}} </mat-cell>
+  </ng-container>
+</mat-table>
+
+<table class="table" ng-controller="carsController as carsController">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Vin</th>
+      <th>Registration number</th>
+      <th>Rented</th>
+      <th>Car address</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="car in cars.cars">
+      <td>{{ car.id }}</td>
+      <td>{{ car.brand }}</td>
+      <td>{{ car.model }}</td>
+      <td>{{ car.vin }}</td>
+      <td>{{ car.registrationNumber }}</td>
+      <td>{{ car.rented ? 'Yes' : 'No'}}</td>
+      <td><caraddress address="{{ car.address }}"></caraddress></td>
+      <td>
+        <a href="{{ '#!' + car.hrefShow }}" class="btn btn-primary">Show</a>
+        <a href="{{ '#!' + car.hrefEdit }}" class="btn btn-secondary">Edit</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

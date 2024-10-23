@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Car index{% endblock %}
+
+{% block body %}
+  <header class="text-center mb-3">
+    <h1>Car index</h1>
+    <a href="{{ path('app_car_new') }}" class="btn btn-success">Create new</a>
+  </header>
+
+  <table class="table" ng-controller="carsController as carsController">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Vin</th>
+        <th>Registration number</th>
+        <th>Rented</th>
+        <th>Car address</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="car in carsController.cars">
+        {% verbatim %}
+          <td>{{ car.id }}</td>
+          <td>{{ car.brand }}</td>
+          <td>{{ car.model }}</td>
+          <td>{{ car.vin }}</td>
+          <td>{{ car.registrationNumber }}</td>
+          <td>{{ car.isRented}}</td>
+          <td>{{ car.address }}</td>
+          <td>
+            <a href="{{ car.hrefShow }}" class="btn btn-primary">show</a>
+            <a href="{{ car.hrefShow }}" class="btn btn-secondary">edit</a>
+          </td>
+        {% endverbatim %}
+      </tr>
+    </tbody>
+  </table>
+{% endblock %}

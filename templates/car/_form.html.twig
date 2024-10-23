@@ -1,0 +1,28 @@
+{{ form_start(form, {
+  'attr': {
+    'id': 'car-form',
+    'class': 'container content-container',
+    'action': action
+  }
+}) }}
+  {{ form_errors(form) }}
+    {{ include('forms/field.html.twig', {
+      'field': form.brand_id
+    }) }}
+    {{ include('forms/field.html.twig', {
+      'field': form.model
+    }) }}
+    {{ include('forms/field.html.twig', {
+      'field': form.registration_number
+    }) }}
+    {{ include('forms/field.html.twig', {
+      'field': form.vin
+    }) }}
+    {{ include('forms/field.html.twig', {
+      'field': form.client_id
+    }) }}
+    {{ form_rest(form) }}
+  <div class="buttons-container">
+    <button class="btn btn-primary form-button">{{ button_label|default('Save') }}</button>
+  </div>
+{{ form_end(form) }}

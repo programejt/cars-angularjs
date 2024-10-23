@@ -1,0 +1,35 @@
+<form method="post" id="car-form" class="container content-container"></form>
+  <div class="mb-3">
+    <label class="form-label" for="{{ field.vars.id }}">{{ field_label(field) }}</label>
+    {{ form_widget(field, {
+      'attr': defaultAttr
+    }) }}
+    <div class="invalid-feedback">{{ error }}</div>
+  </div>
+  {{ include('forms/field.html.twig', {
+    'field': form.brand_id
+  }) }}
+  {{ include('forms/field.html.twig', {
+    'field': form.model
+  }) }}
+  {{ include('forms/field.html.twig', {
+    'field': form.registration_number
+  }) }}
+  {{ include('forms/field.html.twig', {
+    'field': form.vin
+  }) }}
+  {{ include('forms/field.html.twig', {
+    'field': form.client_id
+  }) }}
+  {{ form_rest(form) }}
+  <div class="buttons-container">
+    <button class="btn btn-primary form-button">{{ button_label|default('Save') }}</button>
+  </div>
+
+<div class="mb-3">
+  <label class="form-label" for="{{ field.vars.id }}">{{ field_label(field) }}</label>
+  {{ form_widget(field, {
+    'attr': defaultAttr
+  }) }}
+  <div class="invalid-feedback">{{ error }}</div>
+</div>
