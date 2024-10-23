@@ -2,7 +2,7 @@
 
 Uruchomienie projektu:
 
-1. Sklonuj repozytorium na swój komputer (`git clone https://github.com/programejt/books-symfony.git`)
+1. Sklonuj repozytorium na swój komputer (`git clone https://github.com/programejt/cars-angularjs.git`)
 2. Przejdź do katalogu sklonowanego repozytorium
 3. Skonfiguruj środowisko bazodanowe (dla tego projektu był używany `mysql`)
 4. Utwórz kopię pliku `.env` (w głównym katalogu projektu) i nazwij go `.env.local`, następnie skonfiguruj w nim połączenie bazodanowe:
