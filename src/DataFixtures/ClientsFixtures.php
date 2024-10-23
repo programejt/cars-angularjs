@@ -14,8 +14,8 @@ class ClientsFixtures extends Fixture
       (new Client)->setName('Jan Kowalski')->setCity('Warszawa')->setEmail('jankowalski@email.com')->setAddress('Kowalska 4'),
       (new Client)->setName('Jan Bednarski')->setCity('Warszawa')->setEmail('janbednarski@email.com')->setAddress('Kowalska 5'),
       (new Client)->setName('Adam Kowalski')->setCity('Katowice')->setEmail('adamkowalski@email.com')->setAddress('Wierzbowa 7'),
-      (new Client)->setName('Jan Kowalski')->setCity('Zakopane')->setEmail('jankowalski@email.com')->setAddress('Aleje 3'),
-      (new Client)->setName('Jan Kowalski')->setCity('Olsztyn')->setEmail('jankowalski@email.com')->setAddress('Bracka 2')
+      (new Client)->setName('Stanisław Wasilewski')->setCity('Zakopane')->setEmail('swasilewski@email.com')->setAddress('Aleje 3'),
+      (new Client)->setName('Marek Wujek')->setCity('Olsztyn')->setEmail('mwujek@email.com')->setAddress('Bracka 2')
     ];
 
     foreach ($clients as &$client) {
