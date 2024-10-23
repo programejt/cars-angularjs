@@ -3,11 +3,11 @@ var app = angular.module('app-cars', ['ngRoute']);
 app.config(function ($routeProvider) {
   $routeProvider
   .when('/', {
-    templateUrl: 'assets/templates/car/index.html',
+    templateUrl: '/assets/templates/car/index.html',
     controller: 'carsController'
   })
   .when('/car', {
-    templateUrl: 'assets/templates/car/index.html',
+    templateUrl: '/assets/templates/car/index.html',
     controller: 'carsController'
   })
   .when('/car/new', {
@@ -15,7 +15,7 @@ app.config(function ($routeProvider) {
     controller: 'carNewController'
   })
   .when('/car/:id', {
-    templateUrl: 'assets/templates/car/show.html',
+    templateUrl: '/assets/templates/car/show.html',
     controller: 'carController'
   })
   .when('/car/:id/edit', {
